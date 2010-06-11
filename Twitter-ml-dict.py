@@ -23,25 +23,25 @@ fout = open('dataFile', 'a') #to create such a file
 fout.close()
 api = twitter.Api(username, password)
 
-while (True):
+while True:
 	time.sleep(sleep_time)
 	word = 'hello'
 	timeline = api.GetReplies()
 	for s in timeline:
-		y = -1
-		i = 0;
+		dict_keyword_find = -1
+		check_duplicate = 0;
 		#print "%s --> %s" % (s.user.name, s.text)
 		tweet = s.user.name + "\t" + s.text
-		y = tweet.find("dict")
+		dict_keyword_find = tweet.find("dict")
 
-		if y > 0:
+		if dict_keyword_find > 0:
 			fin = open('dataFile', 'r')
-			x = fin.read()
-			i = x.find(str(s.id))
-			print i
+			fin_contents = fin.read()
+			check_duplicate = fin_contents.find(str(s.id))
+			print check_duplicate
 			fin.close()
 	
-		if i < 0:
+		if check_duplicate < 0:
 			print "%s --> %s" % (s.user.name, s.text)
 			word = s.text[13:]
 			print word #for debugging			
