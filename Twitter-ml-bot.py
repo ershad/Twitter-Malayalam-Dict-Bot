@@ -30,6 +30,8 @@ sleep_time = 1
 
 fout = open('dataFile', 'a') #to create such a file
 fout.close()
+
+#OAuth
 CONSUMER_KEY = ''
 CONSUMER_SECRET = ''
 ACCESS_KEY = ''
