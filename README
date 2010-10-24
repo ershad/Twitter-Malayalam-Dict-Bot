@@ -1,6 +1,6 @@
 **** README ****
 
-This script needs python-twitter library.
+This script needs python-tweepy library.
 
 Working of the Bot:
 
@@ -22,4 +22,6 @@ Issues:
    
    > While processing some defintions, unicode issues arises.
 
-   > Sometimes, with any reason with an HTTP error code 403 - Forbidden
+TODO:
+
+1. Fix minor unicode issues.
